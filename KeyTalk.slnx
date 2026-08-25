@@ -3,6 +3,9 @@
     <Project Path="KeyTalk.AppHost/KeyTalk.AppHost.csproj" />
     <Project Path="KeyTalk.ServiceDefaults/KeyTalk.ServiceDefaults.csproj" />
   </Folder>
+  <Project Path="CertServer.BackEndBridge/CertServer.BackEndBridge.csproj" />
+  <Project Path="CertServer.MockBridge/CertServer.MockBridge.csproj" />
+  <Project Path="CertServer.Shared/CertServer.Shared.csproj" />
   <Project Path="CertServer/CertServer.Client/CertServer.Client.csproj" />
   <Project Path="CertServer/CertServer/CertServer.csproj" />
 </Solution>
