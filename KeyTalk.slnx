@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Aspire/">
+    <Project Path="KeyTalk.AppHost/KeyTalk.AppHost.csproj" />
+    <Project Path="KeyTalk.ServiceDefaults/KeyTalk.ServiceDefaults.csproj" />
+  </Folder>
+  <Project Path="CertServer/CertServer.Client/CertServer.Client.csproj" />
+  <Project Path="CertServer/CertServer/CertServer.csproj" />
+</Solution>
