@@ -14,12 +14,12 @@
     <ClCompile Include="CertServer.Api.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RestServer.cpp">
+    <ClCompile Include="HighThroughputServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RestServer.h">
+    <ClInclude Include="HighThroughputServer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -140,10 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CertServer.Api.cpp" />
-    <ClCompile Include="RestServer.cpp" />
+    <ClCompile Include="HighThroughputServer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RestServer.h" />
+    <ClInclude Include="HighThroughputServer.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="requests.http" />

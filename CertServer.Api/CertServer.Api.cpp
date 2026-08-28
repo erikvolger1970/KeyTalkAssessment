@@ -1,20 +1,18 @@
 #include <iostream>
-#include "RestServer.h"
-
-using namespace std;
+#include "HighThroughputServer.h"
 
 int main()
 {
-    // Start a simple REST API server on port 8080
-    RestServer server;
-    if (!server.Start(8080)) {
-        cerr << "Failed to start REST server" << endl;
+    // Start a high-throughput REST server on port 8080 with 8 worker threads
+    HighThroughputServer server(8080, 8);
+    if (!server.Start()) {
+        std::cerr << "Failed to start HighThroughputServer" << std::endl;
         return 1;
     }
 
-    cout << "REST server running on http://localhost:8080" << endl;
-    cout << "Press Enter to stop..." << endl;
-    cin.get();
+    std::cout << "HighThroughputServer running on http://localhost:8080" << std::endl;
+    std::cout << "Press Enter to stop..." << std::endl;
+    std::cin.get();
 
     server.Stop();
     return 0;
