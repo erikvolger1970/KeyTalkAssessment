@@ -13,6 +13,7 @@
     <ProjectReference Include="..\..\KeyTalk.ServiceDefaults\KeyTalk.ServiceDefaults.csproj" />
     <ProjectReference Include="..\CertServer.Client\CertServer.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.11" />
+	<PackageReference Include="MudBlazor" Version="9.9.0" />
   </ItemGroup>
 
 </Project>
