@@ -29,6 +29,10 @@ using socklen_t = int;
 #include <fcntl.h>
 #endif
 
+// EV: The code is very C and begging for polymorphism:
+//		WindowsSocket/LinuxSocket
+//		WindowsHighThroughputServer/LinuxHighThroughputServer
+
 #if defined(_WIN32)
 using socket_t = SOCKET;
 #else
@@ -62,6 +66,7 @@ static int send_socket(socket_t s, const char* buf, int len, int flags) {
 // -------------------------- Stub adapters --------------------------
 // These provide compile-time placeholders. Replace with real Glaze & Aeronet
 // integration when libraries are available.
+// EV: this is not what I asked for in the prompt...
 
 namespace glaze_stub {
 	template<typename T>
@@ -248,6 +253,7 @@ struct HighThroughputServer::Impl {
 		}
 	}
 
+	// EV: what a mess...
 	void handle_client(int clientFd) {
 		// read some data (non-blocking safe)
 		const int BUF = 8192;
