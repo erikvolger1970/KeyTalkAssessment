@@ -8,7 +8,7 @@
 }
 else
 {
-    <MudDataGrid Items="@UserData">
+    <MudDataGrid Items="@UserData" ondblclick="HandleDoubleClick">
         <Columns>
             <PropertyColumn Property="x => x.Id" Title="ID" />
             <PropertyColumn Property="x => x.Name" />
@@ -33,5 +33,8 @@ else
         ];
     }
 
-    private record User(int Id, string Name, Guid Key, string CompanyName);
+    private void HandleDoubleClick(User user)
+    {
+        // Handle double click event
+    }
 }
