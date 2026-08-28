@@ -1,13 +1,19 @@
 ﻿@page "/userlist"
 @rendermode InteractiveAuto
 
-@if (UserData is null)
+@if (_userData is null)
 {
     <p>No user data</p>
 }
 else
 {
-    <MudDataGrid Items="@UserData" ondblclick="HandleDoubleClick">
+    <MudDataGrid T="User" Items="@_userData"
+                 EditMode="@(DataGridEditMode.Form)" EditTrigger="@(DataGridEditTrigger.OnRowClick)"
+                 StartedEditingItem="@StartedEditingItem" CanceledEditingItem="@CanceledEditingItem" CommittedItemChanges="@CommittedItemChanges"
+                 Bordered="true" Dense="true">
+        <ToolBarContent>
+            <MudText Typo="Typo.h6">User Cryptographic Keys</MudText>
+        </ToolBarContent>
         <Columns>
             <PropertyColumn Property="x => x.Id" Title="ID" />
             <PropertyColumn Property="x => x.Name" />
@@ -15,25 +21,6 @@ else
             <PropertyColumn Property="x => x.CompanyName" />
         </Columns>
     </MudDataGrid>
-}
 
-@code {
-    private IEnumerable<User>? UserData;
-
-    protected override async Task OnInitializedAsync()
-    {
-        // todo: read from rest api
-        UserData =
-        [
-            new User(1, "Alice", Guid.NewGuid(), "Company A"),
-            new User(2, "Bob", Guid.NewGuid(), "Company B"),
-            new User(3, "Charlie", Guid.NewGuid(), "Company C"),
-            new User(4, "Donald", Guid.NewGuid(), "Company C"),
-        ];
-    }
-
-    private void HandleDoubleClick(User user)
-    {
-        // Handle double click event
-    }
+    <UserDetailsModal User="@_selectedUser"/>
 }

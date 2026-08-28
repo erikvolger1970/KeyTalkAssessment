@@ -1,0 +1,16 @@
+﻿<dialog id="userdetails-modal" data-nosnippet>
+    <div>
+        <p class="">
+            Userdetails here for user @User?.Name ?? "Unknown User".
+        </p>
+        <button id="ok-button">
+            Ok
+        </button>
+    </div>
+</dialog>
+
+@code
+{
+    [Parameter]
+    public required User User { get; set; }
+}
