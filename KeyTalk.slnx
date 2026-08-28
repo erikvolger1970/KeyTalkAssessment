@@ -1,7 +1,15 @@
 <Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
   <Folder Name="/Aspire/">
     <Project Path="KeyTalk.AppHost/KeyTalk.AppHost.csproj" />
     <Project Path="KeyTalk.ServiceDefaults/KeyTalk.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/BackEnd/">
+    <Project Path="CertServer.Api/CertServer.Api.vcxproj" Id="75098a3f-74d0-408d-abc2-5be32fe6379f" />
   </Folder>
   <Project Path="CertServer.BackEndBridge/CertServer.BackEndBridge.csproj" />
   <Project Path="CertServer.MockBridge/CertServer.MockBridge.csproj" />
