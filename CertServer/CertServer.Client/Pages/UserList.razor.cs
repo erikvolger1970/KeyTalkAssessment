@@ -26,21 +26,4 @@ public partial class UserList
         else
             _userData = Users;
     }
-
-    // events
-    private void StartedEditingItem(User user)
-    {
-        _events.Insert(0, $"Event = StartedEditingItem, Data = {JsonSerializer.Serialize(user)}");
-    }
-
-    private void CanceledEditingItem(User user)
-    {
-        // update code for backing data here if needed
-        _events.Insert(0, $"Event = CanceledEditingItem, Data = {JsonSerializer.Serialize(user)}");
-    }
-
-    private Task<DataGridEditFormAction> CommittedItemChanges(User user)
-    {
-        return Task.FromResult(DataGridEditFormAction.Close);
-    }
 }
