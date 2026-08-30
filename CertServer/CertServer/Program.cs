@@ -1,5 +1,8 @@
+using CertServer.BackEndBridge;
 using CertServer.Client.Pages;
 using CertServer.Components;
+using CertServer.MockBridge;
+using CertServer.Shared;
 using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +15,14 @@ builder.Services.AddMudServices();
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+
+// register services
+builder.Services.AddKeyedScoped<IRestApi, RealApi>("useLive");
+builder.Services.AddKeyedScoped<IRestApi, MockApi>("useMock");
+
+// register factory for IRestApi that will resolve the correct implementation based on the ApiMode configuration value
+builder.Services.AddScoped((serviceProvider) => serviceProvider.GetRequiredKeyedService<IRestApi>(
+    serviceProvider.GetRequiredService<IConfiguration>().GetValue<string>("ApiMode")));
 
 var app = builder.Build();
 

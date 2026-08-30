@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CertServer.Shared\CertServer.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

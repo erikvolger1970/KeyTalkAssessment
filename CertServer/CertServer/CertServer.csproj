@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\CertServer.BackEndBridge\CertServer.BackEndBridge.csproj" />
+    <ProjectReference Include="..\..\CertServer.MockBridge\CertServer.MockBridge.csproj" />
     <ProjectReference Include="..\..\CertServer.Shared\CertServer.Shared.csproj" />
     <ProjectReference Include="..\..\KeyTalk.ServiceDefaults\KeyTalk.ServiceDefaults.csproj" />
     <ProjectReference Include="..\CertServer.Client\CertServer.Client.csproj" />
