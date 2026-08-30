@@ -12,7 +12,7 @@ public partial class UserList
 
     private IEnumerable<User>? _userData;
 
-    private readonly List<string> _events = new();
+    private readonly List<string> _events = [];
 
     private User? _selectedUser;
 
