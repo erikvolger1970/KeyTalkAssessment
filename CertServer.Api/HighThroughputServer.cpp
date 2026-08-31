@@ -29,7 +29,7 @@ using socklen_t = int;
 #include <fcntl.h>
 #endif
 
-// EV: The code is very C and begging for polymorphism:
+// EV: The AI code is very C and begging for polymorphism:
 //		WindowsSocket/LinuxSocket
 //		WindowsHighThroughputServer/LinuxHighThroughputServer
 
